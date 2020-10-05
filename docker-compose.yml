@@ -1,0 +1,9 @@
+version: '2'
+services:
+  postgresql-repmgr:
+    image: devsadds/postgresql-repmg:12-debian-10-v1.1.4
+    build: 
+      context: build/from-stratch/.
+      args:
+        BASE_IMAGE: "docker.io/bitnami/minideb:buster"
+    container_name: postgresql-repmgr
